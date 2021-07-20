@@ -15,7 +15,7 @@ Pods/
 **/node_modules/*
 **/.firebaserc
 
-.plist
+GoogleService-Info.plist
 
 FirebaseAuth/Tests/Sample/Sample/Application.plist
 FirebaseAuth/Tests/Sample/Sample/AuthCredentials.h
