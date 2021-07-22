@@ -50,6 +50,9 @@
 		6189687A26A6E89200DA8A16 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6189687926A6E89200DA8A16 /* AuthViewModel.swift */; };
 		6189687D26A6FCC100DA8A16 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6189687C26A6FCC000DA8A16 /* ImageUploader.swift */; };
 		6189688026A72A9100DA8A16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6189687F26A72A9100DA8A16 /* Constants.swift */; };
+		61E97B1926A9888100BF6E6E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E97B1826A9888100BF6E6E /* Post.swift */; };
+		61E97B1C26A9893200BF6E6E /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E97B1B26A9893200BF6E6E /* FeedViewModel.swift */; };
+		61E97B1F26A9909300BF6E6E /* PostGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E97B1E26A9909300BF6E6E /* PostGridViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +94,9 @@
 		6189687926A6E89200DA8A16 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		6189687C26A6FCC000DA8A16 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		6189687F26A72A9100DA8A16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		61E97B1826A9888100BF6E6E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		61E97B1B26A9893200BF6E6E /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		61E97B1E26A9909300BF6E6E /* PostGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,7 @@
 				6121571A268EF346000924DC /* Feed */,
 				614A409026A7718900B3B0A6 /* SearchViewModel.swift */,
 				6160CD2926A85F2F00B4527B /* UploadPostViewModel.swift */,
+				61E97B1E26A9909300BF6E6E /* PostGridViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				614A407E26A76DBD00B3B0A6 /* User.swift */,
+				61E97B1826A9888100BF6E6E /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -296,6 +304,7 @@
 		6121571A268EF346000924DC /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				61E97B1B26A9893200BF6E6E /* FeedViewModel.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -406,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E97B1C26A9893200BF6E6E /* FeedViewModel.swift in Sources */,
 				616190CD269EFA4A00289992 /* UserStatView.swift in Sources */,
 				61215726268EF490000924DC /* SearchView.swift in Sources */,
 				61215723268EF464000924DC /* FeedView.swift in Sources */,
@@ -415,6 +425,7 @@
 				612156F7268EF105000924DC /* InstagramSwiftUIApp.swift in Sources */,
 				6121570D268EF20A000924DC /* ContentView.swift in Sources */,
 				616190DD269F03EC00289992 /* ResetPasswordView.swift in Sources */,
+				61E97B1F26A9909300BF6E6E /* PostGridViewModel.swift in Sources */,
 				6121571F268EF3FD000924DC /* MainTabView.swift in Sources */,
 				616190D4269EFF4300289992 /* ImagePicker.swift in Sources */,
 				6160CD2A26A85F2F00B4527B /* UploadPostViewModel.swift in Sources */,
@@ -427,6 +438,7 @@
 				6188855A269D8604009F46E5 /* SearchBar.swift in Sources */,
 				61215729268EF4DE000924DC /* NotificationsView.swift in Sources */,
 				61215732268EFBCB000924DC /* FeedCell.swift in Sources */,
+				61E97B1926A9888100BF6E6E /* Post.swift in Sources */,
 				614A409126A7718900B3B0A6 /* SearchViewModel.swift in Sources */,
 				616190D1269EFB1900289992 /* ProfileActionButtonView.swift in Sources */,
 				61888563269D8A91009F46E5 /* UserListView.swift in Sources */,
