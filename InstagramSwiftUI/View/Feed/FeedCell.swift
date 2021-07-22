@@ -52,7 +52,7 @@ struct FeedCell: View {
                         .padding(4)
                 })
                 
-                Button(action: {}, label: {
+                NavigationLink(destination: CommentsView(post: viewModel.post)) {
                     Image(systemName: "bubble.right")
                         .resizable()
                         .scaledToFill()
@@ -60,7 +60,7 @@ struct FeedCell: View {
                         .font(.system(size: 20))
                         .clipped()
                         .padding(4)
-                })
+                }
                 
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     Image(systemName: "paperplane")
