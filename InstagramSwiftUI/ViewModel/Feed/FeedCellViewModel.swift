@@ -18,6 +18,7 @@ class FeedCellViewModel: ObservableObject {
     init(post: Post) {
         self.post = post
         checkIfUserLikedPost()
+        fetchPostUser()
     }
     
     func like() {
@@ -30,6 +31,8 @@ class FeedCellViewModel: ObservableObject {
                     .document(postId).setData([:]) { _ in
                         
                         COLLECTION_POSTS.document(postId).updateData(["likes": self.post.likes + 1])
+                        
+                        NotificationsViewModel.uploadNotification(toUid: self.post.ownerUid, type: .like, post: self.post)
                         
                         self.post.didLike = true
                         self.post.likes += 1
@@ -59,6 +62,13 @@ class FeedCellViewModel: ObservableObject {
         COLLECTION_USERS.document(uid).collection("user-likes").document(postId).getDocument { snapshot, _ in
             guard let didLike = snapshot?.exists else { return }
             self.post.didLike = didLike
+        }
+    }
+    
+    func fetchPostUser() {
+        COLLECTION_USERS.document(post.ownerUid).getDocument { (snapshot, _) in
+            self.post.user = try? snapshot?.data(as: User.self)
+            print(self.post.user?.username)
         }
     }
 }

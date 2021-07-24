@@ -21,6 +21,9 @@ class ProfileViewModel: ObservableObject {
             if let error = error {
                 print(error.localizedDescription)
             }
+            
+            NotificationsViewModel.uploadNotification(toUid: uid, type: .follow)
+            
             self.user.isFollowed = true
         }
     }

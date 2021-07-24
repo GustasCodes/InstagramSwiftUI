@@ -20,22 +20,26 @@ struct FeedCell: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                KFImage(URL(string: viewModel.post.ownerImageUrl))
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 26, height: 26)
-                    .clipped()
-                    .cornerRadius(18)
-                
-                Text(viewModel.post.ownerUsername)
-                    .font(.system(size: 14, weight: .semibold))
+                if let user = viewModel.post.user {
+                    NavigationLink(destination: ProfileView(user: user)) {
+                        KFImage(URL(string: viewModel.post.ownerImageUrl))
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 26, height: 26)
+                            .clipped()
+                            .cornerRadius(18)
+                        
+                        Text(viewModel.post.ownerUsername)
+                            .font(.system(size: 14, weight: .semibold))
+                    }
+                }
             }
             .padding([.leading, .bottom], 8)
             
             KFImage(URL(string: viewModel.post.imageUrl))
                 .resizable()
                 .scaledToFill()
-                .frame(maxHeight: 440)
+                .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: 440)
                 .clipped()
             
             HStack(spacing: 16) {

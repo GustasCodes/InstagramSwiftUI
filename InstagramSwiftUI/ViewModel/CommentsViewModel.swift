@@ -33,6 +33,8 @@ class CommentsViewModel: ObservableObject {
                 print(error.localizedDescription)
                 return
             }
+            
+            NotificationsViewModel.uploadNotification(toUid: self.post.ownerUid, type: .comment, post: self.post)
         }
     }
     
@@ -45,7 +47,6 @@ class CommentsViewModel: ObservableObject {
         query.addSnapshotListener { snapshot, _ in
             guard let addedDocs = snapshot?.documentChanges.filter({ $0.type == .added }) else { return }
             self.comments.append(contentsOf: addedDocs.compactMap({ try? $0.document.data(as: Comment.self)}))
-            print(self.comments)
         }
     }
 }
